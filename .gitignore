@@ -1,0 +1,9 @@
+# temp
+_*
+~*
+
+# Windows
+thumbs.db
+
+# Python
+__pycache__
