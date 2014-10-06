@@ -24,11 +24,20 @@ body
 	z-index: 1;
 	text-align: center;
 	vertical-align: text-middle;
-	display: inline-block
+	display: inline-block;
 }
 #player-example
 {
 	visibility: hidden;
 	width: 40px;
 	height: 40px;
+}
+#addSome
+{
+	position: absolute;
+	display: inline-block;
+	top: 5px;
+	left: 5px;
+	padding: 5px;
+	background: #CCC;
 }

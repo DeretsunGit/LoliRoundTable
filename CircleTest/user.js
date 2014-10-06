@@ -10,8 +10,6 @@ function CenterIt() {
 	};
 	var ElemPos = $(".muhTable").offset();
 	
-	// ElemPos.left = (Dim.x - ElemDim.x) / 2;
-	 // ElemPos.top = (Dim.y - ElemDim.y) / 2;
 	console.log("Resizing to: " + Dim.x + "*" + Dim.y);
 	console.log("To: " + ElemPos.top + "," + ElemPos.left);
 	$(".muhTable").offset(ElemPos);
@@ -44,6 +42,18 @@ function GetPercPerPlayer(rray) {
 	return (360 / rray.length);
 }
 
+function Grow() {
+	var ElemDim = {
+		x: $(".Table").width(),
+		y: $(".Table").height()
+	};
+	
+	$(".Table").width(ElemDim.x + 10);
+	$(".Table").height(ElemDim.y + 10);
+	$(".Table").css({"border-radius": (ElemDim.x + 10) + "px"});
+	console.log("Meh");
+}
+
 var PlayersPlaced = 0;
 var players = [
 	"MJ"
@@ -61,6 +71,8 @@ $(document).ready(function() {
 
 	players.forEach(Spawn);
 	$("a#addSome").click(function() {
+		if (GetPercPerPlayer(players) <= 20)
+			Grow();
 		players.push(Math.floor(Math.random() * 100));
 		$("div#player").remove();
 		PlayersPlaced = 0;
