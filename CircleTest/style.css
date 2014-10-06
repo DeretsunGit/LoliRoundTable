@@ -22,3 +22,9 @@ body
 	font-family: Monospace;
 	z-index: 0;
 }
+#player-example
+{
+	visibility: hidden;
+	width: 40px;
+	height: 40px;
+}

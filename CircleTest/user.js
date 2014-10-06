@@ -30,8 +30,8 @@ function Spawn(player)
 	};
 	
 	var PlayerPos = {
-		x: CentrePos.x + ((ElemDim.x * 2 / 3) * Math.cos(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player").width() / 2),
-		y: CentrePos.y + ((ElemDim.y * 2 / 3) * Math.sin(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player").height() / 2)
+		x: CentrePos.x + ((ElemDim.x * 2 / 3) * Math.cos(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").width() / 2),
+		y: CentrePos.y + ((ElemDim.y * 2 / 3) * Math.sin(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").height() / 2)
 	};
 	
 	PlayersPlaced++;
@@ -50,7 +50,7 @@ var players = [
 ];
 
 window.onresize = function(){
-	$("#player").remove();
+	$("div#player").remove();
 	PlayersPlaced = 0;
 	CenterIt();
 	players.forEach(Spawn);
@@ -60,9 +60,9 @@ $(document).ready(function() {
 	var Table = document.body.getElementsByClassName("Table")[0].getBoundingClientRect();
 
 	players.forEach(Spawn);
-	$("#addSome").click(function() {
-		players.push("New");
-		$("#player").remove();
+	$("a#addSome").click(function() {
+		players.push(Math.floor(Math.random() * 100));
+		$("div#player").remove();
 		PlayersPlaced = 0;
 		players.forEach(Spawn);
 	});

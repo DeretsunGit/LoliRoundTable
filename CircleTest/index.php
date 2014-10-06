@@ -10,7 +10,7 @@
 		
 	</head>
 	<body>
-		<div class="Table"><div id="centerTable"></div></div>
+		<div class="Table"><div id="player-example"></div></div>
 		<a href="#" id="addSome">Add Player</a>
 		<script src="./user.js"></script>
 		<!-- Lolis not allowed -->
