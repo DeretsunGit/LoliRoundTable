@@ -5,23 +5,23 @@ function CenterIt() {
 		y: $(document).height()
 	};
 	var ElemDim = {
-		x: $(".muhTable").width(),
-		y: $(".muhTable").height()
+		x: $(".Tab-grid").width(),
+		y: $(".Tab-grid").height()
 	};
 	var ElemPos = $(".muhTable").offset();
 	
 	console.log("Resizing to: " + Dim.x + "*" + Dim.y);
 	console.log("To: " + ElemPos.top + "," + ElemPos.left);
-	$(".muhTable").offset(ElemPos);
+	$(".Tab-grid").offset(ElemPos);
 }
 
 function Spawn(player)
 {
 	var ElemDim = {
-		x: $(".Table").width(),
-		y: $(".Table").height()
+		x: $(".Tab-grid").width(),
+		y: $(".Tab-grid").height()
 	};
-	var ElemPos = $(".Table").offset();
+	var ElemPos = $(".Tab-grid").offset();
 	var CentrePos = {
 		x: ElemPos.left + (ElemDim.x / 2),
 		y: ElemPos.top + (ElemDim.y / 2)
@@ -34,7 +34,7 @@ function Spawn(player)
 	
 	PlayersPlaced++;
 		
-	$(".Table").append('<div id="player" class="player-' + PlayersPlaced + '">' + player + '</div>');
+	$(".Tab-grid").append('<div id="player" class="player-' + PlayersPlaced + '">' + player + '</div>');
 	$(".player-" + PlayersPlaced).offset({ top: PlayerPos.y, left: PlayerPos.x });
 }
 
@@ -48,10 +48,9 @@ function Grow() {
 		y: $(".Table").height()
 	};
 	
-	$(".Table").width(ElemDim.x + 10);
-	$(".Table").height(ElemDim.y + 10);
-	$(".Table").css({"border-radius": (ElemDim.x + 10) + "px"});
-	console.log("Meh");
+	$(".Tab-grid").width(ElemDim.x + 10);
+	$(".Tab-grid").height(ElemDim.y + 10);
+	$(".Tab-grid").css({"border-radius": (ElemDim.x + 10) + "px"});
 }
 
 var PlayersPlaced = 0;
@@ -67,7 +66,7 @@ window.onresize = function(){
 };
 
 $(document).ready(function() {
-	var Table = document.body.getElementsByClassName("Table")[0].getBoundingClientRect();
+	var Table = document.body.getElementsByClassName("Tab-grid")[0].getBoundingClientRect();
 
 	players.forEach(Spawn);
 	$("a#addSome").click(function() {
