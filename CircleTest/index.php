@@ -14,7 +14,7 @@
 			<div class="Tab-item Tab-img-1">
 				<div class="Tab-info">
 					<h3>D&D 3.5</h3>
-					<p>by Deretsun <a href="http://en.wikipedia.org/wiki/Tsundere">More informations</a></p>
+					<p>Deretsun<a href="http://en.wikipedia.org/wiki/Tsundere">More informations</p></h3>
 				</div>
 			</div>
 		</div>
