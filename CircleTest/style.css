@@ -1,30 +1,7 @@
 body
 {
 	padding: 60px;
-	background-image: url(paper.jpg);
-}
-
-/*.Table
-{
-	margin: 0 auto;
-	width: 200px;
-	height: 200px;
-	border-radius: 200px;
-	border: 1px solid #000;
-	position: relative;
-	z-index: -1;
-	background: url(heh.jpg) no-repeat;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-} */
-
-.Tab-grid {
-	width: 220px;
-	height: 220px;
-	display: inline-block;
-	text-align: center;
-	margin: 20px;
-	z-index: 1;
+	background-image: url(scene.png);
 }
 
 .Tab-item {
@@ -32,86 +9,74 @@ body
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
+	overflow: hidden;
     position: relative;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	box-shadow:
+		inset 0 0 0 8px rgba(255, 255, 255, 0.5),
+		0 1px 2px rgba(0,0,0,0.1);
+	transition: all 0.4s ease-in-out;
     cursor: default;
-	z-index: 1;
+	/* z-index: 1; */
 }
 
-.Tab-info-wrap {
-	position: absolute;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    perspective: 800px;
-    transition: all 0.4s ease-in-out;
-    top: 20px;
-    left: 20px;
-    background: #f9f9f9 url(paper.jpg);
-    box-shadow: 
-        0 0 0 20px rgba(255,255,255,0.2), 
-        inset 0 0 3px rgba(115,114, 23, 0.8);
+.Tab-grid {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 150px;
+	height: 150px;
 }
 
 .Tab-info {
 	position: absolute;
-    width: 180px;
-    height: 180px;
+	background: rgba(139,69,19,0.3);
+    width: inherit;
+    height: inherit;
     border-radius: 50%;
+	overflow: hidden;
+	opacity: 0;
     transition: all 0.4s ease-in-out;
-    transform-style: preserve-3d;
-}
-
-.Tab-info > div {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-position: center center;
-    backface-visibility: hidden;
-}
-
-.Tab-info .Tab-info-back {
-	transform: rotate3d(0,1,0,180deg);
-    /*background: #000;*/
-	background-image: url(test2.jpg);
+	transform: scale(0);
 }
 
 .Tab-img-1 { 
-    background-image: url(test2.jpg);
+    background-image: url(table3.png);
 }
 
 .Tab-info h3 {
-    color: #000;
+    color: #FFF;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 26px;
-    margin: 0 15px;
-    padding: 40px 0 0 0;
-    height: 90px;
+    font-size: 22px;
+    margin: 0 30px;
+    padding: 45px 0 0 0;
+    height: 140px;
     font-family: 'Open Sans', Arial, sans-serif;
     text-shadow: 
-        0 0 1px #000, 
-        0 1px 2px rgba(255,255,255,0.3);
+        0 0 1px #FFF, 
+        0 1px 2px rgba(0,0,0,0.3);
 }
  
 .Tab-info p {
-    color: #000;
-    padding: 10px 5px;
-    margin: -60px 20px;
-    font-size: 16px;
-    border-top: 1px solid rgba(255,255,255,0.5);
+    color: #FFF;
+	padding: 10px 5px;
+	font-style: italic;
+    margin: 0 30px;
+    font-size: 12px;
+	opacity: 0;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	transition: all 1s ease-in-out 0.4s;
 }
  
 .Tab-info p a {
     display: block;
-    color: rgba(0,0,0,0.7);
+    color: rgba(255,255,255,0.7);
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 9px;
     letter-spacing: 1px;
     padding-top: 4px;
     font-family: 'Open Sans', Arial, sans-serif;
@@ -121,14 +86,19 @@ body
     color: rgba(255,242,34, 0.8);
 }
 
-.Tab-item:hover .Tab-info-wrap {
+.Tab-item:hover {
     box-shadow: 
-        0 0 0 0 rgba(255,255,255,0.8), 
-        inset 0 0 3px rgba(115,114, 23, 0.8);
+		inset 0 0 0 1px rgba(255,255,255, 0.1),
+        0 1px 2px rgba(0,0,0,0.1);
 }
  
 .Tab-item:hover .Tab-info {
-    transform: rotate3d(0,1,0,-180deg);
+    transform: scale(1);
+	opacity: 1;
+}
+
+.Tab-item:hover .Tab-info p {
+	opacity: 1;
 }
 
 #player

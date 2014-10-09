@@ -12,14 +12,9 @@
 	<body>
 		<div class="Tab-grid">
 			<div class="Tab-item Tab-img-1">
-				<div class="Tab-info-wrap">
-					<div class="Tab-info">
-						<div class="Tab-info-front Tab-img-1"></div>
-						<div class="Tab-info-back">
-						<h3>D&D 3.5</h3>
-						<p>by Deretsun <a href="http://en.wikipedia.org/wiki/Tsundere">More informations</a></p>
-						</div>
-					</div>
+				<div class="Tab-info">
+					<h3>D&D 3.5</h3>
+					<p>by Deretsun <a href="http://en.wikipedia.org/wiki/Tsundere">More informations</a></p>
 				</div>
 			</div>
 		</div>

@@ -28,8 +28,8 @@ function Spawn(player)
 	};
 	
 	var PlayerPos = {
-		x: CentrePos.x + ((ElemDim.x * 2 / 3) * Math.cos(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").width() / 2),
-		y: CentrePos.y + ((ElemDim.y * 2 / 3) * Math.sin(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").height() / 2)
+		x: CentrePos.x + ((ElemDim.x * 0.75) * Math.cos(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").width() / 2),
+		y: CentrePos.y + ((ElemDim.y * 0.75) * Math.sin(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").height() / 2)
 	};
 	
 	PlayersPlaced++;
