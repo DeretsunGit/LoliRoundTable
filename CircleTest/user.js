@@ -28,8 +28,8 @@ function Spawn(player)
 	};
 	
 	var PlayerPos = {
-		x: CentrePos.x + ((ElemDim.x * 0.75) * Math.cos(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").width() / 2),
-		y: CentrePos.y + ((ElemDim.y * 0.75) * Math.sin(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").height() / 2)
+		x: CentrePos.x + ((ElemDim.x * 0.7) * Math.cos(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").width() / 2),
+		y: CentrePos.y + ((ElemDim.y * 0.7) * Math.sin(GetPercPerPlayer(players) * PlayersPlaced * Math.PI / 180)) - ($("#player-example").height() / 2)
 	};
 	
 	PlayersPlaced++;
@@ -44,8 +44,8 @@ function GetPercPerPlayer(rray) {
 
 function Grow() {
 	var ElemDim = {
-		x: $(".Table").width(),
-		y: $(".Table").height()
+		x: $(".Tab-grid").width(),
+		y: $(".Tab-grid").height()
 	};
 	
 	$(".Tab-grid").width(ElemDim.x + 10);
