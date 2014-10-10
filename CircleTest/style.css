@@ -1,7 +1,7 @@
 body
 {
 	padding: 60px;
-	background-image: url(build22.png);
+	background-image: url(build2.png);
 }
 
 ul {
@@ -28,7 +28,7 @@ li {
 
 .Tab-grid {
 	position: relative;
-	top: 275px;
+	top: 380px;
     left: 550px;
 	margin: 20px 0 0 0;
     display: block;
