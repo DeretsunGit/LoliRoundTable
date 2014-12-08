@@ -6,7 +6,7 @@ function toDateTime(ts) {
 }
 
 function retrieveMovieList() {
-	var a =	$.ajax({url: "./movies.json", type: "GET", dataType: "JSON"}).done(function(data) {
+	$.ajax({url: "./movies.json", type: "GET", dataType: "JSON"}).done(function(data) {
 		for (var key in data)
 		{
 			console.log(key + ":");
@@ -17,7 +17,6 @@ function retrieveMovieList() {
 	}).complete(function(data) {
 		movieList = data.responseJSON;
 	});
-	return a;
 }
 
 $(document).ready(function() {
